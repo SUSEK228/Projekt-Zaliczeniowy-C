@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Pkule\\Desktop\\Github\\Projekt-Zaliczeniowy-C\\Projekt-Zaliczeniowy-C\\FinanceTracker\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BBC40221-2917-4767-ACF1-3B676EA7A0D8}|FinanceTracker.csproj|c:\\users\\pkule\\desktop\\github\\projekt-zaliczeniowy-c\\projekt-zaliczeniowy-c\\financetracker\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BBC40221-2917-4767-ACF1-3B676EA7A0D8}|FinanceTracker.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{76B39924-8888-4DC3-B21D-45C8964A124A}|FinanceTracker.csproj|c:\\users\\pkule\\desktop\\github\\projekt-zaliczeniowy-c\\projekt-zaliczeniowy-c\\financetracker\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{76B39924-8888-4DC3-B21D-45C8964A124A}|FinanceTracker.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76B39924-8888-4DC3-B21D-45C8964A124A}|FinanceTracker.csproj|c:\\users\\pkule\\desktop\\github\\projekt-zaliczeniowy-c\\projekt-zaliczeniowy-c\\financetracker\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76B39924-8888-4DC3-B21D-45C8964A124A}|FinanceTracker.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +23,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Form1.cs [Projekt]",
-              "DocumentMoniker": "C:\\Users\\Pkule\\Desktop\\Github\\Projekt-Zaliczeniowy-C\\Projekt-Zaliczeniowy-C\\FinanceTracker\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\Pkule\\Desktop\\Github\\Projekt-Zaliczeniowy-C\\Projekt-Zaliczeniowy-C\\FinanceTracker\\Form1.cs [Projekt]",
-              "RelativeToolTip": "Form1.cs [Projekt]",
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Pkule\\Desktop\\Github\\Projekt-Zaliczeniowy-C\\Projekt-Zaliczeniowy-C\\FinanceTracker\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "MainWindow.xaml",
+              "ToolTip": "C:\\Users\\Pkule\\Desktop\\Github\\Projekt-Zaliczeniowy-C\\Projekt-Zaliczeniowy-C\\FinanceTracker\\MainWindow.xaml",
+              "RelativeToolTip": "MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-21T09:03:39.835Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Pkule\\Desktop\\Github\\Projekt-Zaliczeniowy-C\\Projekt-Zaliczeniowy-C\\FinanceTracker\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Pkule\\Desktop\\Github\\Projekt-Zaliczeniowy-C\\Projekt-Zaliczeniowy-C\\FinanceTracker\\MainWindow.xaml.cs",
+              "RelativeToolTip": "MainWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T08:41:42.869Z",
-              "EditorCaption": " [Projekt]"
+              "WhenOpened": "2025-04-21T09:03:37.854Z",
+              "EditorCaption": ""
             }
           ]
         }

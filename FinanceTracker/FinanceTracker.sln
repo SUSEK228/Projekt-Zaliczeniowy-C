@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinanceTracker", "FinanceTracker.csproj", "{BBC40221-2917-4767-ACF1-3B676EA7A0D8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinanceTracker", "FinanceTracker.csproj", "{76B39924-8888-4DC3-B21D-45C8964A124A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BBC40221-2917-4767-ACF1-3B676EA7A0D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BBC40221-2917-4767-ACF1-3B676EA7A0D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BBC40221-2917-4767-ACF1-3B676EA7A0D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BBC40221-2917-4767-ACF1-3B676EA7A0D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76B39924-8888-4DC3-B21D-45C8964A124A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76B39924-8888-4DC3-B21D-45C8964A124A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76B39924-8888-4DC3-B21D-45C8964A124A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76B39924-8888-4DC3-B21D-45C8964A124A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {C21C2059-9257-482A-89F9-E74B3651C5BE}
+		SolutionGuid = {F7184FC4-7CC5-4308-B834-A58F98EC1356}
 	EndGlobalSection
 EndGlobal
