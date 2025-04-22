@@ -1,24 +1,59 @@
-﻿using System.Text;
+﻿using System;
+using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using FinanceTracker.Models;
+using static FinanceTracker.Models.Transaction;
 
 namespace FinanceTracker
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
+        private TransactionManager transactionManager = new();
+        private ObservableCollection<Transaction> transactions = new();
+
         public MainWindow()
         {
             InitializeComponent();
+            TransactionsDataGrid.ItemsSource = transactions;
+            UpdateBalance();
+        }
+
+        private void AddTransaction_Click(object sender, RoutedEventArgs e)
+        {
+            if (decimal.TryParse(AmountTextBox.Text, out decimal amount) &&
+                TypeComboBox.SelectedItem is ComboBoxItem selectedItem)
+            {
+                var type = selectedItem.Content.ToString() == "Przychód"
+                    ? TransactionType.Income
+                    : TransactionType.Expense;
+
+                var transaction = new Transaction
+                {
+                    Description = DescriptionTextBox.Text,
+                    Amount = amount,
+                    Date = DateTime.Now,
+                    Type = type
+                };
+
+                transactionManager.AddTransaction(transaction);
+                transactions.Add(transaction);
+                UpdateBalance();
+
+                // Czyść formularz
+                DescriptionTextBox.Text = "";
+                AmountTextBox.Text = "";
+                TypeComboBox.SelectedIndex = 0;
+            }
+            else
+            {
+                MessageBox.Show("Podaj poprawną kwotę!", "Błąd", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+        }
+
+        private void UpdateBalance()
+        {
+            BalanceTextBlock.Text = $"Saldo: {transactionManager.GetBalance():C}";
         }
     }
 }
