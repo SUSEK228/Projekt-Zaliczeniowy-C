@@ -15,7 +15,11 @@ namespace FinanceTracker
         public MainWindow()
         {
             InitializeComponent();
-            TransactionsDataGrid.ItemsSource = transactions;
+            transactionManager.InitializeDatabase(); // *NOWE*
+
+            transactions = new ObservableCollection<Transaction>(transactionManager.GetAllTransactions()); // *NOWE* została dodana nowa pusta lista na transkacje do baz danych
+            TransactionsDataGrid.ItemsSource = transactions;// *NOWE 
+
             UpdateBalance();
         }
 
@@ -51,9 +55,26 @@ namespace FinanceTracker
             }
         }
 
+        private void DeleteTransaction_Click(object sender, RoutedEventArgs e)
+        {
+            if (sender is Button button && button.DataContext is Transaction transaction)
+            {
+                var result = MessageBox.Show("Czy na pewno chcesz usunąć tę transakcję?", "Potwierdzenie", MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+                if (result == MessageBoxResult.Yes)
+                {
+                    transactionManager.DeleteTransaction(transaction);
+                    transactions.Remove(transaction);
+                    UpdateBalance();
+                }
+            }
+        }
+
         private void UpdateBalance()
         {
             BalanceTextBlock.Text = $"Saldo: {transactionManager.GetBalance():C}";
         }
+
+
     }
 }

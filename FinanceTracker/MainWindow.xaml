@@ -36,16 +36,26 @@
 
             <TextBlock Text="Lista transakcji" FontSize="16" FontWeight="Bold" Margin="0,0,0,5"/>
             <DataGrid x:Name="TransactionsDataGrid"
-                      AutoGenerateColumns="True"
+                      AutoGenerateColumns="False"
                       Background="White"
-                      RowBackground="#ecf0f1"
-                      AlternatingRowBackground="#ffffff"
-                      GridLinesVisibility="Horizontal"
-                      BorderBrush="#bdc3c7"
-                      BorderThickness="1"
                       IsReadOnly="True"
                       Height="350"
-                      Margin="0,0,0,10"/>
+                      Margin="0,0,0,10">        
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Opis" Binding="{Binding Description}" />
+                    <DataGridTextColumn Header="Kwota" Binding="{Binding Amount}" />
+                    <DataGridTextColumn Header="Typ" Binding="{Binding Type}" />
+                    <DataGridTextColumn Header="Data" Binding="{Binding Date}" />
+                    <DataGridTemplateColumn Header="Usuń">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="🗑️" Click="DeleteTransaction_Click" Padding="5"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
 
             <TextBlock x:Name="BalanceTextBlock"
                        FontSize="18"

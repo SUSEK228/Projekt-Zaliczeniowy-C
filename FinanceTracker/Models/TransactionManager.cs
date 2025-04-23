@@ -6,18 +6,42 @@ namespace FinanceTracker.Models
 {
     public class TransactionManager
     {
-        private List<Transaction> _transactions = new();
 
         public void AddTransaction(Transaction transaction) // Dodaje transakcje do listy
         {
-            _transactions.Add(transaction);
+            using var context = new FinanceContext();
+            context.Transactions.Add(transaction);
+            context.SaveChanges();
         }
 
-        public IEnumerable<Transaction> GetAllTransactions() { return _transactions; } // Zwraca całą listę transakcji
-
-        public decimal GetBalance() // Oblicza aktualne saldo
+        public void DeleteTransaction(Transaction transaction) // *NOWE* Usuwa transakcje
         {
-            return _transactions.Sum(t => t.Type == TransactionType.Income ? t.Amount : -t.Amount);
+            using var context = new FinanceContext();
+            var toRemove = context.Transactions.FirstOrDefault(t => t.Id == transaction.Id);
+            if (toRemove != null)
+            {
+                context.Transactions.Remove(toRemove);
+                context.SaveChanges();
+            }
+        }
+
+        public IEnumerable<Transaction> GetAllTransactions()  // Zwraca całą listę transakcji
+        {
+            using var context = new FinanceContext();
+            return context.Transactions.ToList();
+        }
+
+        public decimal GetBalance() // Oblicza aktualne saldo // *ZMIANA* teraz liczy saldo bezposrednio z bazdy danych
+        {
+            using var context = new FinanceContext();
+            return context.Transactions 
+               .Sum(t => t.Type == TransactionType.Income ? t.Amount : -t.Amount);
+        }
+
+        public void InitializeDatabase()
+        {
+            using var context = new FinanceContext();
+            context.Database.EnsureCreated();
         }
     }
 }

@@ -4,6 +4,7 @@ namespace FinanceTracker.Models
 {
     public class Transaction
     {
+        public int Id { get; set; } // *Nowe* Dodajemy klucz głowny
         public required DateTime Date { get; set; } // Data transakcji
         public required string Description { get; set; } // Opis np. Zakupy, Wypłata
         public required decimal Amount { get; set; } // Kwota transakcji
