@@ -26,11 +26,11 @@ namespace FinanceTracker
         private void AddTransaction_Click(object sender, RoutedEventArgs e)
         {
             if (decimal.TryParse(AmountTextBox.Text, out decimal amount) &&
-                TypeComboBox.SelectedItem is ComboBoxItem selectedItem)
+                TypeComboBox.SelectedIndex >= 0)
             {
-                var type = selectedItem.Content.ToString() == "Przychód"
-                    ? TransactionType.Income
-                    : TransactionType.Expense;
+                var type = TypeComboBox.SelectedIndex == 0
+                    ? Transaction.TransactionType.Income
+                    : Transaction.TransactionType.Expense;
 
                 var transaction = new Transaction
                 {
@@ -43,8 +43,9 @@ namespace FinanceTracker
                 transactionManager.AddTransaction(transaction);
                 transactions.Add(transaction);
                 UpdateBalance();
+                UpdateStatistics();
 
-                // Czyść formularz
+                // Wyczyść formularz
                 DescriptionTextBox.Text = "";
                 AmountTextBox.Text = "";
                 TypeComboBox.SelectedIndex = 0;
@@ -66,6 +67,7 @@ namespace FinanceTracker
                     transactionManager.DeleteTransaction(transaction);
                     transactions.Remove(transaction);
                     UpdateBalance();
+                    UpdateStatistics(); 
                 }
             }
         }
@@ -75,6 +77,30 @@ namespace FinanceTracker
             BalanceTextBlock.Text = $"Saldo: {transactionManager.GetBalance():C}";
         }
 
+
+        // **NOWE** DO AKTUALIZACJI STATYSTYK
+        private void UpdateStatistics()
+        {
+            var income = transactions.Where(t => t.Type == TransactionType.Income).Sum(t => t.Amount);
+            var expense = transactions.Where(t => t.Type == TransactionType.Expense).Sum(t => t.Amount);
+            var count = transactions.Count;
+
+            TotalIncomeText.Text = $"💰 Przychody: {income:C}";
+            TotalExpenseText.Text = $"💸 Wydatki: {expense:C}";
+            TotalTransactionsText.Text = $"📊 Liczba transakcji: {count}";
+        }
+
+        private void ShowBudgetView(object sender, RoutedEventArgs e) 
+        {
+            BudgetGrid.Visibility = Visibility.Visible;
+            StatsGrid.Visibility = Visibility.Collapsed;
+        }
+
+        private void ShowStatsView(object sender, RoutedEventArgs e)
+        {
+            BudgetGrid.Visibility = Visibility.Collapsed;
+            StatsGrid.Visibility = Visibility.Visible;
+        }
 
     }
 }
