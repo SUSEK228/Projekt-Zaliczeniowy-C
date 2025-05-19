@@ -122,8 +122,6 @@ C:\Users\Pkule\Desktop\Github\Projekt-Zaliczeniowy-C\Projekt-Zaliczeniowy-C\Fina
 C:\Users\Pkule\Desktop\Github\Projekt-Zaliczeniowy-C\Projekt-Zaliczeniowy-C\FinanceTracker\bin\Debug\net8.0-windows\runtimes\win-x86\native\e_sqlite3.dll
 C:\Users\Pkule\Desktop\Github\Projekt-Zaliczeniowy-C\Projekt-Zaliczeniowy-C\FinanceTracker\bin\Debug\net8.0-windows\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 C:\Users\Pkule\Desktop\Github\Projekt-Zaliczeniowy-C\Projekt-Zaliczeniowy-C\FinanceTracker\obj\Debug\net8.0-windows\FinanceTracker.csproj.AssemblyReference.cache
-C:\Users\Pkule\Desktop\Github\Projekt-Zaliczeniowy-C\Projekt-Zaliczeniowy-C\FinanceTracker\obj\Debug\net8.0-windows\MainWindow.baml
-C:\Users\Pkule\Desktop\Github\Projekt-Zaliczeniowy-C\Projekt-Zaliczeniowy-C\FinanceTracker\obj\Debug\net8.0-windows\MainWindow.g.cs
 C:\Users\Pkule\Desktop\Github\Projekt-Zaliczeniowy-C\Projekt-Zaliczeniowy-C\FinanceTracker\obj\Debug\net8.0-windows\App.g.cs
 C:\Users\Pkule\Desktop\Github\Projekt-Zaliczeniowy-C\Projekt-Zaliczeniowy-C\FinanceTracker\obj\Debug\net8.0-windows\FinanceTracker_MarkupCompile.cache
 C:\Users\Pkule\Desktop\Github\Projekt-Zaliczeniowy-C\Projekt-Zaliczeniowy-C\FinanceTracker\obj\Debug\net8.0-windows\FinanceTracker.g.resources
@@ -208,3 +206,5 @@ C:\Users\Dominik\Desktop\ProjectC\Projekt-Zaliczeniowy-C\FinanceTracker\obj\Debu
 C:\Users\Dominik\Desktop\ProjectC\Projekt-Zaliczeniowy-C\FinanceTracker\obj\Debug\net8.0-windows\ref\FinanceTracker.dll
 C:\Users\Dominik\Desktop\ProjectC\Projekt-Zaliczeniowy-C\FinanceTracker\obj\Debug\net8.0-windows\Views\MainWindow.baml
 C:\Users\Dominik\Desktop\ProjectC\Projekt-Zaliczeniowy-C\FinanceTracker\obj\Debug\net8.0-windows\Views\MainWindow.g.cs
+C:\Users\Pkule\Desktop\Github\Projekt-Zaliczeniowy-C\Projekt-Zaliczeniowy-C\FinanceTracker\obj\Debug\net8.0-windows\Views\MainWindow.baml
+C:\Users\Pkule\Desktop\Github\Projekt-Zaliczeniowy-C\Projekt-Zaliczeniowy-C\FinanceTracker\obj\Debug\net8.0-windows\Views\MainWindow.g.cs

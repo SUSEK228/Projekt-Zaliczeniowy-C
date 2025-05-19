@@ -135,13 +135,38 @@
                     </DataGridTemplateColumn>
                 </DataGrid.Columns>
             </DataGrid>
+            <Grid Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
 
-            <TextBlock x:Name="BalanceTextBlock"
-                       Grid.Row="3"
-                       FontSize="18"
-                       FontWeight="Bold"
-                       HorizontalAlignment="Right"
-                       Foreground="#0A1123"/>
+                <!-- Filtry po lewej -->
+                <WrapPanel Margin="10" VerticalAlignment="Center" Grid.Column="0">
+                    <StackPanel Margin="5">
+                        <TextBlock Text="Opis" FontWeight="Bold"/>
+                        <TextBox x:Name="FilterDescriptionTextBox" Width="150"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="5">
+                        <TextBlock Text="Data" FontWeight="Bold"/>
+                        <DatePicker x:Name="FilterDatePicker" Width="150"/>
+                    </StackPanel>
+
+                    <Button Content="Filtruj" Width="80" Margin="5" Click="FilterTransactions_Click"/>
+                    <Button Content="Wyczyść" Width="80" Margin="5" Click="ClearFilters_Click"/>
+                </WrapPanel>
+
+                <!-- Saldo po prawej -->
+                <TextBlock x:Name="BalanceTextBlock"
+               Grid.Column="1"
+               FontSize="18"
+               FontWeight="Bold"
+               VerticalAlignment="Center"
+               HorizontalAlignment="Right"
+               Foreground="#0A1123"
+               Margin="10"/>
+            </Grid>
         </Grid>
 
         <!-- Widok Statystyk -->

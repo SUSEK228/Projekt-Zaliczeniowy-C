@@ -102,5 +102,46 @@ namespace FinanceTracker
             StatsGrid.Visibility = Visibility.Visible;
         }
 
+        private void FilterTransactions_Click(object sender, RoutedEventArgs e)
+        {
+            var filtered = transactionManager.GetAllTransactions();
+
+            // Filtruj po opisie
+            if (!string.IsNullOrWhiteSpace(FilterDescriptionTextBox.Text))
+            {
+                filtered = filtered.Where(t => t.Description.Contains(FilterDescriptionTextBox.Text, StringComparison.OrdinalIgnoreCase));
+            }
+
+
+            // Filtruj po dacie
+            if (FilterDatePicker.SelectedDate.HasValue)
+            {
+                var selectedDate = FilterDatePicker.SelectedDate.Value.Date;
+                filtered = filtered.Where(t => t.Date.Date == selectedDate);
+            }
+
+            transactions.Clear();
+            foreach (var t in filtered)
+                transactions.Add(t);
+
+            UpdateBalance();
+            UpdateStatistics();
+        }
+
+        private void ClearFilters_Click(object sender, RoutedEventArgs e)
+        {
+            FilterDescriptionTextBox.Text = "";
+            FilterDatePicker.SelectedDate = null;
+
+            transactions.Clear();
+            foreach (var t in transactionManager.GetAllTransactions())
+                transactions.Add(t);
+
+            UpdateBalance();
+            UpdateStatistics();
+        }
+
+
     }
 }
+
