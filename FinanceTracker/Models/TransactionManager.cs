@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using static FinanceTracker.MainWindow;
 using static FinanceTracker.Models.Transaction;
 
 namespace FinanceTracker.Models
@@ -43,5 +44,33 @@ namespace FinanceTracker.Models
             using var context = new FinanceContext();
             context.Database.EnsureCreated();
         }
+
+        public SpendingLimit? GetLimitForCurrentMonth()
+        {
+            using var context = new FinanceContext();
+            var now = DateTime.Now;
+            return context.SpendingLimits
+                .FirstOrDefault(l => l.Month.Year == now.Year && l.Month.Month == now.Month);
+        }
+
+        public decimal GetTotalExpensesThisMonth()
+        {
+            using var context = new FinanceContext();
+            var now = DateTime.Now;
+            return context.Transactions
+                .Where(t => t.Type == Transaction.TransactionType.Expense &&
+                            t.Date.Month == now.Month && t.Date.Year == now.Year)
+                .Sum(t => t.Amount);
+        }
+
+        public bool CanAddExpense(decimal amount)
+        {
+            var limit = GetLimitForCurrentMonth();
+            if (limit == null) return true;
+
+            var spent = GetTotalExpensesThisMonth();
+            return spent + amount <= limit.LimitAmount;
+        }
+
     }
 }

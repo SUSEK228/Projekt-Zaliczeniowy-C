@@ -11,6 +11,8 @@ namespace FinanceTracker.Models
     {
         public DbSet<Transaction> Transactions { get; set; }
 
+        public DbSet<SpendingLimit> SpendingLimits { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlite("Data Source=finances.db");

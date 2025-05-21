@@ -32,6 +32,12 @@ namespace FinanceTracker
                     ? Transaction.TransactionType.Income
                     : Transaction.TransactionType.Expense;
 
+                if (type == TransactionType.Expense && !transactionManager.CanAddExpense(amount))
+                {
+                    MessageBox.Show("Przekroczono limit wydatków na ten miesiąc!", "Limit", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    return;
+                } 
+
                 var transaction = new Transaction
                 {
                     Description = DescriptionTextBox.Text,
@@ -94,12 +100,20 @@ namespace FinanceTracker
         {
             BudgetGrid.Visibility = Visibility.Visible;
             StatsGrid.Visibility = Visibility.Collapsed;
+            LimitsGrid.Visibility = Visibility.Collapsed;
         }
 
         private void ShowStatsView(object sender, RoutedEventArgs e)
         {
             BudgetGrid.Visibility = Visibility.Collapsed;
             StatsGrid.Visibility = Visibility.Visible;
+            LimitsGrid.Visibility = Visibility.Collapsed;
+        }
+        private void ShowLimitsView(object sender, RoutedEventArgs e)
+        {
+            BudgetGrid.Visibility = Visibility.Collapsed;
+            StatsGrid.Visibility = Visibility.Collapsed;
+            LimitsGrid.Visibility = Visibility.Visible;
         }
 
         private void FilterTransactions_Click(object sender, RoutedEventArgs e)
@@ -140,6 +154,51 @@ namespace FinanceTracker
             UpdateBalance();
             UpdateStatistics();
         }
+
+        private void SetLimit_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (decimal.TryParse(LimitAmountTextBox.Text, out decimal amount) &&
+                    LimitDatePicker.SelectedDate.HasValue)
+                {
+                    using var context = new FinanceContext();
+
+                    var selected = LimitDatePicker.SelectedDate.Value;
+                    var month = new DateTime(selected.Year, selected.Month, 1);
+
+                    var existing = context.SpendingLimits
+                        .FirstOrDefault(l => l.Month.Year == month.Year && l.Month.Month == month.Month);
+
+                    if (existing != null)
+                    {
+                        existing.LimitAmount = amount;
+                    }
+                    else
+                    {
+                        context.SpendingLimits.Add(new SpendingLimit
+                        {
+                            LimitAmount = amount,
+                            Month = month
+                        });
+                    }
+
+                    context.SaveChanges();
+                    MessageBox.Show("Limit zapisano!", "Sukces", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Podaj poprawną kwotę i miesiąc!", "Błąd", MessageBoxButton.OK, MessageBoxImage.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Błąd: {ex.Message}", "Wyjątek", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+
+
 
 
     }

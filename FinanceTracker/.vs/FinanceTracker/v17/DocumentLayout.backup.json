@@ -9,6 +9,18 @@
     {
       "AbsoluteMoniker": "D:0:0:{76B39924-8888-4DC3-B21D-45C8964A124A}|FinanceTracker.csproj|c:\\users\\pkule\\desktop\\github\\projekt-zaliczeniowy-c\\projekt-zaliczeniowy-c\\financetracker\\views\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{76B39924-8888-4DC3-B21D-45C8964A124A}|FinanceTracker.csproj|solutionrelative:views\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76B39924-8888-4DC3-B21D-45C8964A124A}|FinanceTracker.csproj|c:\\users\\pkule\\desktop\\github\\projekt-zaliczeniowy-c\\projekt-zaliczeniowy-c\\financetracker\\models\\spendinglimits.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76B39924-8888-4DC3-B21D-45C8964A124A}|FinanceTracker.csproj|solutionrelative:models\\spendinglimits.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76B39924-8888-4DC3-B21D-45C8964A124A}|FinanceTracker.csproj|c:\\users\\pkule\\desktop\\github\\projekt-zaliczeniowy-c\\projekt-zaliczeniowy-c\\financetracker\\models\\financecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76B39924-8888-4DC3-B21D-45C8964A124A}|FinanceTracker.csproj|solutionrelative:models\\financecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76B39924-8888-4DC3-B21D-45C8964A124A}|FinanceTracker.csproj|c:\\users\\pkule\\desktop\\github\\projekt-zaliczeniowy-c\\projekt-zaliczeniowy-c\\financetracker\\models\\transactionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76B39924-8888-4DC3-B21D-45C8964A124A}|FinanceTracker.csproj|solutionrelative:models\\transactionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,18 +30,55 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SpendingLimits.cs",
+              "DocumentMoniker": "C:\\Users\\Pkule\\Desktop\\Github\\Projekt-Zaliczeniowy-C\\Projekt-Zaliczeniowy-C\\FinanceTracker\\Models\\SpendingLimits.cs",
+              "RelativeDocumentMoniker": "Models\\SpendingLimits.cs",
+              "ToolTip": "C:\\Users\\Pkule\\Desktop\\Github\\Projekt-Zaliczeniowy-C\\Projekt-Zaliczeniowy-C\\FinanceTracker\\Models\\SpendingLimits.cs",
+              "RelativeToolTip": "Models\\SpendingLimits.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T08:59:22.345Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TransactionManager.cs",
+              "DocumentMoniker": "C:\\Users\\Pkule\\Desktop\\Github\\Projekt-Zaliczeniowy-C\\Projekt-Zaliczeniowy-C\\FinanceTracker\\Models\\TransactionManager.cs",
+              "RelativeDocumentMoniker": "Models\\TransactionManager.cs",
+              "ToolTip": "C:\\Users\\Pkule\\Desktop\\Github\\Projekt-Zaliczeniowy-C\\Projekt-Zaliczeniowy-C\\FinanceTracker\\Models\\TransactionManager.cs",
+              "RelativeToolTip": "Models\\TransactionManager.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAqwDEAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T08:36:29.148Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FinanceContext.cs",
+              "DocumentMoniker": "C:\\Users\\Pkule\\Desktop\\Github\\Projekt-Zaliczeniowy-C\\Projekt-Zaliczeniowy-C\\FinanceTracker\\Models\\FinanceContext.cs",
+              "RelativeDocumentMoniker": "Models\\FinanceContext.cs",
+              "ToolTip": "C:\\Users\\Pkule\\Desktop\\Github\\Projekt-Zaliczeniowy-C\\Projekt-Zaliczeniowy-C\\FinanceTracker\\Models\\FinanceContext.cs",
+              "RelativeToolTip": "Models\\FinanceContext.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T08:36:06.378Z"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\Pkule\\Desktop\\Github\\Projekt-Zaliczeniowy-C\\Projekt-Zaliczeniowy-C\\FinanceTracker\\Views\\MainWindow.xaml",
               "RelativeDocumentMoniker": "Views\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\Pkule\\Desktop\\Github\\Projekt-Zaliczeniowy-C\\Projekt-Zaliczeniowy-C\\FinanceTracker\\Views\\MainWindow.xaml",
-              "RelativeToolTip": "Views\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\Pkule\\Desktop\\Github\\Projekt-Zaliczeniowy-C\\Projekt-Zaliczeniowy-C\\FinanceTracker\\Views\\MainWindow.xaml*",
+              "RelativeToolTip": "Views\\MainWindow.xaml*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-19T11:14:24.984Z",
+              "WhenOpened": "2025-05-21T08:48:20.056Z",
               "EditorCaption": ""
             },
             {
@@ -40,7 +89,7 @@
               "RelativeDocumentMoniker": "Views\\MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\Pkule\\Desktop\\Github\\Projekt-Zaliczeniowy-C\\Projekt-Zaliczeniowy-C\\FinanceTracker\\Views\\MainWindow.xaml.cs",
               "RelativeToolTip": "Views\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAGIAAAAAAAAAAIA+wHAAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAKsAAAAAAAAAAAAmwLsAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-19T11:19:41.393Z",
               "EditorCaption": ""
