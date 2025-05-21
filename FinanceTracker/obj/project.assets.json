@@ -1460,19 +1460,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Pkule\\.nuget\\packages\\": {}
+    "C:\\Users\\pk\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Pkule\\Desktop\\Github\\Projekt-Zaliczeniowy-C\\Projekt-Zaliczeniowy-C\\FinanceTracker\\FinanceTracker.csproj",
+      "projectUniqueName": "C:\\Users\\pk\\Desktop\\ProjektC\\Projekt-Zaliczeniowy-C\\FinanceTracker\\FinanceTracker.csproj",
       "projectName": "FinanceTracker",
-      "projectPath": "C:\\Users\\Pkule\\Desktop\\Github\\Projekt-Zaliczeniowy-C\\Projekt-Zaliczeniowy-C\\FinanceTracker\\FinanceTracker.csproj",
-      "packagesPath": "C:\\Users\\Pkule\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Pkule\\Desktop\\Github\\Projekt-Zaliczeniowy-C\\Projekt-Zaliczeniowy-C\\FinanceTracker\\obj\\",
+      "projectPath": "C:\\Users\\pk\\Desktop\\ProjektC\\Projekt-Zaliczeniowy-C\\FinanceTracker\\FinanceTracker.csproj",
+      "packagesPath": "C:\\Users\\pk\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\pk\\Desktop\\ProjektC\\Projekt-Zaliczeniowy-C\\FinanceTracker\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Pkule\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\pk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1498,7 +1503,8 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      }
+      },
+      "SdkAnalysisLevel": "9.0.200"
     },
     "frameworks": {
       "net8.0-windows7.0": {
@@ -1540,7 +1546,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

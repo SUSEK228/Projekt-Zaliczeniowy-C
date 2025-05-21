@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Pkule\Desktop\Github\Projekt-Zaliczeniowy-C\Projekt-Zaliczeniowy-C\FinanceTracker\obj\Debug\net8.0-windows\
+C:\Users\pk\Desktop\ProjektC\Projekt-Zaliczeniowy-C\FinanceTracker\obj\Debug\net8.0-windows\
 FinanceTracker
 none
 false
-TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-C:\Users\Pkule\Desktop\Github\Projekt-Zaliczeniowy-C\Projekt-Zaliczeniowy-C\FinanceTracker\App.xaml
+TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
+C:\Users\pk\Desktop\ProjektC\Projekt-Zaliczeniowy-C\FinanceTracker\App.xaml
 1-1644662438
 
 10-568675169
-2211674425626
+221-512917856
 Views\MainWindow.xaml;
 
-False
+True
 
