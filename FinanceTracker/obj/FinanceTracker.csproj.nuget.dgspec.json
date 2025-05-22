@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pk\\Desktop\\ProjektC\\Projekt-Zaliczeniowy-C\\FinanceTracker\\FinanceTracker.csproj": {}
+    "C:\\Users\\DominikPakuła(322960\\Desktop\\Projekt\\Projekt-Zaliczeniowy-C\\FinanceTracker\\FinanceTracker.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pk\\Desktop\\ProjektC\\Projekt-Zaliczeniowy-C\\FinanceTracker\\FinanceTracker.csproj": {
+    "C:\\Users\\DominikPakuła(322960\\Desktop\\Projekt\\Projekt-Zaliczeniowy-C\\FinanceTracker\\FinanceTracker.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pk\\Desktop\\ProjektC\\Projekt-Zaliczeniowy-C\\FinanceTracker\\FinanceTracker.csproj",
+        "projectUniqueName": "C:\\Users\\DominikPakuła(322960\\Desktop\\Projekt\\Projekt-Zaliczeniowy-C\\FinanceTracker\\FinanceTracker.csproj",
         "projectName": "FinanceTracker",
-        "projectPath": "C:\\Users\\pk\\Desktop\\ProjektC\\Projekt-Zaliczeniowy-C\\FinanceTracker\\FinanceTracker.csproj",
-        "packagesPath": "C:\\Users\\pk\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pk\\Desktop\\ProjektC\\Projekt-Zaliczeniowy-C\\FinanceTracker\\obj\\",
+        "projectPath": "C:\\Users\\DominikPakuła(322960\\Desktop\\Projekt\\Projekt-Zaliczeniowy-C\\FinanceTracker\\FinanceTracker.csproj",
+        "packagesPath": "C:\\Users\\DominikPakuła(322960\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\DominikPakuła(322960\\Desktop\\Projekt\\Projekt-Zaliczeniowy-C\\FinanceTracker\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\pk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\DominikPakuła(322960\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -44,8 +44,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.200"
+        }
       },
       "frameworks": {
         "net8.0-windows7.0": {
@@ -54,6 +53,10 @@
             "CommunityToolkit.Mvvm": {
               "target": "Package",
               "version": "[8.4.0, )"
+            },
+            "DotNetProjects.WpfToolkit.DataVisualization": {
+              "target": "Package",
+              "version": "[6.1.94, )"
             },
             "MaterialDesignColors": {
               "target": "Package",
@@ -87,7 +90,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

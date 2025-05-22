@@ -18,6 +18,18 @@
           "buildTransitive/CommunityToolkit.Mvvm.targets": {}
         }
       },
+      "DotNetProjects.WpfToolkit.DataVisualization/6.1.94": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-windows7.0/DotNetProjects.DataVisualization.Toolkit.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/DotNetProjects.DataVisualization.Toolkit.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
+      },
       "MaterialDesignColors/5.2.1": {
         "type": "package",
         "compile": {
@@ -636,6 +648,20 @@
         "lib/netstandard2.1/CommunityToolkit.Mvvm.dll",
         "lib/netstandard2.1/CommunityToolkit.Mvvm.pdb",
         "lib/netstandard2.1/CommunityToolkit.Mvvm.xml"
+      ]
+    },
+    "DotNetProjects.WpfToolkit.DataVisualization/6.1.94": {
+      "sha512": "5xmRUH+/F3zRxcI8b93W9OUvOUKXpcHShj7jGJdpBAgQTNPEeMLISA/wsO5egSG74Msx+01xwaYjDFTDTUawhQ==",
+      "type": "package",
+      "path": "dotnetprojects.wpftoolkit.datavisualization/6.1.94",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "dotnetprojects.wpftoolkit.datavisualization.6.1.94.nupkg.sha512",
+        "dotnetprojects.wpftoolkit.datavisualization.nuspec",
+        "lib/net40/DotNetProjects.DataVisualization.Toolkit.dll",
+        "lib/net5.0-windows7.0/DotNetProjects.DataVisualization.Toolkit.dll",
+        "lib/net6.0-windows7.0/DotNetProjects.DataVisualization.Toolkit.dll"
       ]
     },
     "MaterialDesignColors/5.2.1": {
@@ -1454,29 +1480,30 @@
   "projectFileDependencyGroups": {
     "net8.0-windows7.0": [
       "CommunityToolkit.Mvvm >= 8.4.0",
+      "DotNetProjects.WpfToolkit.DataVisualization >= 6.1.94",
       "MaterialDesignColors >= 5.2.1",
       "MaterialDesignThemes >= 5.2.1",
       "Microsoft.EntityFrameworkCore.Sqlite >= 9.0.4"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\pk\\.nuget\\packages\\": {},
+    "C:\\Users\\DominikPakuła(322960\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pk\\Desktop\\ProjektC\\Projekt-Zaliczeniowy-C\\FinanceTracker\\FinanceTracker.csproj",
+      "projectUniqueName": "C:\\Users\\DominikPakuła(322960\\Desktop\\Projekt\\Projekt-Zaliczeniowy-C\\FinanceTracker\\FinanceTracker.csproj",
       "projectName": "FinanceTracker",
-      "projectPath": "C:\\Users\\pk\\Desktop\\ProjektC\\Projekt-Zaliczeniowy-C\\FinanceTracker\\FinanceTracker.csproj",
-      "packagesPath": "C:\\Users\\pk\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pk\\Desktop\\ProjektC\\Projekt-Zaliczeniowy-C\\FinanceTracker\\obj\\",
+      "projectPath": "C:\\Users\\DominikPakuła(322960\\Desktop\\Projekt\\Projekt-Zaliczeniowy-C\\FinanceTracker\\FinanceTracker.csproj",
+      "packagesPath": "C:\\Users\\DominikPakuła(322960\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\DominikPakuła(322960\\Desktop\\Projekt\\Projekt-Zaliczeniowy-C\\FinanceTracker\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\pk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\DominikPakuła(322960\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -1503,8 +1530,7 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      },
-      "SdkAnalysisLevel": "9.0.200"
+      }
     },
     "frameworks": {
       "net8.0-windows7.0": {
@@ -1513,6 +1539,10 @@
           "CommunityToolkit.Mvvm": {
             "target": "Package",
             "version": "[8.4.0, )"
+          },
+          "DotNetProjects.WpfToolkit.DataVisualization": {
+            "target": "Package",
+            "version": "[6.1.94, )"
           },
           "MaterialDesignColors": {
             "target": "Package",
@@ -1546,7 +1576,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

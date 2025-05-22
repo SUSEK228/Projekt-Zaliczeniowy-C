@@ -94,6 +94,13 @@ namespace FinanceTracker
             TotalIncomeText.Text = $"💰 Przychody: {income:C}";
             TotalExpenseText.Text = $"💸 Wydatki: {expense:C}";
             TotalTransactionsText.Text = $"📊 Liczba transakcji: {count}";
+
+            var data = new List<KeyValuePair<string, decimal>>
+            {
+                new KeyValuePair<string, decimal>("Przychody", income),
+                new KeyValuePair<string, decimal>("Wydatki",  expense)
+            };
+            PieSeries.ItemsSource = data;
         }
 
         private void ShowBudgetView(object sender, RoutedEventArgs e) 
@@ -108,6 +115,8 @@ namespace FinanceTracker
             BudgetGrid.Visibility = Visibility.Collapsed;
             StatsGrid.Visibility = Visibility.Visible;
             LimitsGrid.Visibility = Visibility.Collapsed;
+            UpdateStatistics();
+
         }
         private void ShowLimitsView(object sender, RoutedEventArgs e)
         {
