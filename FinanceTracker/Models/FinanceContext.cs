@@ -1,21 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace FinanceTracker.Models
 {
     public class FinanceContext : DbContext
     {
         public DbSet<Transaction> Transactions { get; set; }
-
         public DbSet<SpendingLimit> SpendingLimits { get; set; }
+
+        public FinanceContext() { }
+
+        public FinanceContext(DbContextOptions<FinanceContext> options) : base(options) { }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite("Data Source=finances.db");
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseSqlite("Data Source=finances.db");
+            }
         }
     }
 }
