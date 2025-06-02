@@ -206,10 +206,6 @@ namespace FinanceTracker
             }
         }
 
-
-
-
-
     }
 }
 
