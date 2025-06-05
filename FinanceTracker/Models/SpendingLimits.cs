@@ -8,9 +8,12 @@ namespace FinanceTracker.Models
 {
     public class SpendingLimit
     {
-        public int Id { get; set; }
-        public decimal LimitAmount { get; set; }
-        public DateTime Month { get; set; }
+        public int Id { get; set; } // Unikalny identyfikator limitu
+
+        public decimal LimitAmount { get; set; } // Kwota limitu wydatków
+
+        public DateTime Month { get; set; } // Miesiąc, którego dotyczy limit
     }
+
 }
 

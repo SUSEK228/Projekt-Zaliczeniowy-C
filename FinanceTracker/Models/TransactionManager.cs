@@ -9,17 +9,20 @@ namespace FinanceTracker.Models
     {
         private readonly FinanceContext _context;
 
+        // Inicjalizacja managera z kontekstem bazy danych
         public TransactionManager(FinanceContext? context = null)
         {
             _context = context ?? new FinanceContext();
         }
 
+        // Dodawanie nowej transakcji
         public void AddTransaction(Transaction transaction)
         {
             _context.Transactions.Add(transaction);
             _context.SaveChanges();
         }
 
+        // Usuwanie istniejącej transakcji
         public void DeleteTransaction(Transaction transaction)
         {
             var toRemove = _context.Transactions.FirstOrDefault(t => t.Id == transaction.Id);
@@ -30,22 +33,26 @@ namespace FinanceTracker.Models
             }
         }
 
+        // Pobranie wszystkich transakcji z bazy
         public IEnumerable<Transaction> GetAllTransactions()
         {
             return _context.Transactions.ToList();
         }
 
+        // Obliczanie aktualnego salda
         public decimal GetBalance()
         {
             return _context.Transactions
                .Sum(t => t.Type == TransactionType.Income ? t.Amount : -t.Amount);
         }
 
+        // Tworzenie bazy danych jeśli nie istnieje
         public void InitializeDatabase()
         {
             _context.Database.EnsureCreated();
         }
 
+        // Pobieranie limitu wydatków na bieżący miesiąc
         public SpendingLimit? GetLimitForCurrentMonth()
         {
             var now = DateTime.Now;
@@ -53,6 +60,7 @@ namespace FinanceTracker.Models
                 .FirstOrDefault(l => l.Month.Year == now.Year && l.Month.Month == now.Month);
         }
 
+        // Obliczanie sumy wydatków w bieżącym miesiącu
         public decimal GetTotalExpensesThisMonth()
         {
             var now = DateTime.Now;
@@ -62,6 +70,7 @@ namespace FinanceTracker.Models
                 .Sum(t => t.Amount);
         }
 
+        // Sprawdzenie czy dodanie nowego wydatku nie przekroczy limitu
         public bool CanAddExpense(decimal amount)
         {
             var limit = GetLimitForCurrentMonth();

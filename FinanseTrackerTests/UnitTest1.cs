@@ -9,6 +9,7 @@ namespace FinanceTrackerTests
     [TestClass]
     public class UnitTest1
     {
+        // Tworzy konfiguracjê dla bazy danych w pamiêci (InMemory) do celów testowych
         private DbContextOptions<FinanceContext> GetInMemoryOptions()
         {
             return new DbContextOptionsBuilder<FinanceContext>()
@@ -19,6 +20,7 @@ namespace FinanceTrackerTests
         [TestMethod]
         public void AddTransaction()
         {
+            // Testuje dodanie nowej transakcji i sprawdza czy zosta³a zapisana w bazie
             var options = GetInMemoryOptions();
 
             using (var context = new FinanceContext(options))
@@ -45,6 +47,7 @@ namespace FinanceTrackerTests
         [TestMethod]
         public void GetBalance()
         {
+            // Testuje poprawnoœæ obliczania salda (przychody - wydatki)
             var options = GetInMemoryOptions();
 
             using (var context = new FinanceContext(options))
@@ -66,6 +69,7 @@ namespace FinanceTrackerTests
         [TestMethod]
         public void LimitExpenses()
         {
+            // Testuje przekroczenie limitu wydatków w bie¿¹cym miesi¹cu
             var options = GetInMemoryOptions();
             var now = DateTime.Now;
 

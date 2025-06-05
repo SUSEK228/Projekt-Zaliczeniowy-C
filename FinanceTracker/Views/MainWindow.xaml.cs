@@ -15,14 +15,17 @@ namespace FinanceTracker
         public MainWindow()
         {
             InitializeComponent();
-            transactionManager.InitializeDatabase(); // *NOWE*
+            transactionManager.InitializeDatabase();
 
-            transactions = new ObservableCollection<Transaction>(transactionManager.GetAllTransactions()); // *NOWE* została dodana nowa pusta lista na transkacje do baz danych
-            TransactionsDataGrid.ItemsSource = transactions;// *NOWE 
+            // Załaduj transakcje z bazy i przypisz do tabeli
+            transactions = new ObservableCollection<Transaction>(transactionManager.GetAllTransactions()); 
+            TransactionsDataGrid.ItemsSource = transactions;
 
+            // Aktualizuj saldo przy starcie
             UpdateBalance();
         }
 
+        // Dodawanie nowej transakcji po kliknięciu przycisku
         private void AddTransaction_Click(object sender, RoutedEventArgs e)
         {
             if (decimal.TryParse(AmountTextBox.Text, out decimal amount) &&
@@ -62,6 +65,7 @@ namespace FinanceTracker
             }
         }
 
+        // Usuwanie zaznaczonej transakcji
         private void DeleteTransaction_Click(object sender, RoutedEventArgs e)
         {
             if (sender is Button button && button.DataContext is Transaction transaction)
@@ -78,13 +82,14 @@ namespace FinanceTracker
             }
         }
 
+        // Aktualizacja salda w interfejsie
         private void UpdateBalance()
         {
             BalanceTextBlock.Text = $"Saldo: {transactionManager.GetBalance():C}";
         }
 
 
-        // **NOWE** DO AKTUALIZACJI STATYSTYK
+        // Obliczenia statystyk i aktualizacja widoku (przychody, wydatki, liczba transakcji)
         private void UpdateStatistics()
         {
             var income = transactions.Where(t => t.Type == TransactionType.Income).Sum(t => t.Amount);
@@ -103,6 +108,7 @@ namespace FinanceTracker
             PieSeries.ItemsSource = data;
         }
 
+        // Przełączenie na widok budżetu
         private void ShowBudgetView(object sender, RoutedEventArgs e) 
         {
             BudgetGrid.Visibility = Visibility.Visible;
@@ -110,6 +116,7 @@ namespace FinanceTracker
             LimitsGrid.Visibility = Visibility.Collapsed;
         }
 
+        // Przełączenie na widok statystyk
         private void ShowStatsView(object sender, RoutedEventArgs e)
         {
             BudgetGrid.Visibility = Visibility.Collapsed;
@@ -118,6 +125,8 @@ namespace FinanceTracker
             UpdateStatistics();
 
         }
+
+        // Przełączenie na widok limitów
         private void ShowLimitsView(object sender, RoutedEventArgs e)
         {
             BudgetGrid.Visibility = Visibility.Collapsed;
@@ -125,6 +134,7 @@ namespace FinanceTracker
             LimitsGrid.Visibility = Visibility.Visible;
         }
 
+        // Filtrowanie transakcji po opisie i dacie
         private void FilterTransactions_Click(object sender, RoutedEventArgs e)
         {
             var filtered = transactionManager.GetAllTransactions();
@@ -151,6 +161,7 @@ namespace FinanceTracker
             UpdateStatistics();
         }
 
+        // Wyczyść wszystkie filtry
         private void ClearFilters_Click(object sender, RoutedEventArgs e)
         {
             FilterDescriptionTextBox.Text = "";
@@ -164,6 +175,7 @@ namespace FinanceTracker
             UpdateStatistics();
         }
 
+        // Ustawienie limitu dla danego miesiąca
         private void SetLimit_Click(object sender, RoutedEventArgs e)
         {
             try
